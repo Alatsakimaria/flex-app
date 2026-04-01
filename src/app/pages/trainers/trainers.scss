@@ -1,0 +1,287 @@
+.trainers-page {
+	padding: 14px 12px 118px;
+}
+
+.topbar {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.menu {
+	width: 20px;
+	height: 20px;
+	border: 0;
+	padding: 2px 0;
+	display: grid;
+	gap: 2px;
+	background: transparent;
+
+	span {
+		display: block;
+		height: 2px;
+		border-radius: 999px;
+		background: #7d7d7d;
+	}
+}
+
+.brand {
+	margin: 0;
+	color: #ff8a57;
+	font-family: 'Teko', sans-serif;
+	font-size: 36px;
+	line-height: 1;
+	font-weight: 700;
+	letter-spacing: 0.8px;
+}
+
+.avatar {
+	margin-left: auto;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80');
+	background-size: cover;
+	background-position: center;
+}
+
+.intro {
+	margin-top: 10px;
+
+	.kicker {
+		margin: 0;
+		color: #ffbe97;
+		font-family: 'Teko', sans-serif;
+		font-size: 16px;
+		letter-spacing: 2px;
+	}
+
+	h1 {
+		margin: 6px 0;
+		font-family: 'Archivo Black', sans-serif;
+		font-size: 66px;
+		line-height: 0.86;
+		letter-spacing: 0.3px;
+		max-width: 96%;
+	}
+
+	h1 span {
+		color: #ff8a57;
+	}
+
+	.summary {
+		margin: 8px 0 0;
+		color: #b8b8b8;
+		font-size: 15px;
+		line-height: 1.45;
+		max-width: 92%;
+	}
+}
+
+.trainer-card {
+	margin-top: 14px;
+	position: relative;
+	border-radius: 4px;
+	overflow: hidden;
+	min-height: 235px;
+	border: 1px solid rgba(255, 255, 255, 0.03);
+
+	img {
+		width: 100%;
+		height: 100%;
+		min-height: 235px;
+		object-fit: cover;
+		display: block;
+		filter: grayscale(0.88) contrast(1.08);
+	}
+}
+
+.overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 14px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.28));
+
+	h2 {
+		margin: 0;
+		font-family: 'Archivo Black', sans-serif;
+		font-size: 43px;
+		line-height: 0.88;
+	}
+
+	.role {
+		margin: 5px 0 0;
+		color: #ffb88f;
+		font-family: 'Teko', sans-serif;
+		font-size: 16px;
+		letter-spacing: 0.8px;
+		line-height: 1;
+	}
+
+	.blurb {
+		margin: 7px 0 0;
+		color: #cecece;
+		font-size: 14px;
+		max-width: 90%;
+		line-height: 1.35;
+	}
+}
+
+.featured {
+	min-height: 420px;
+
+	img {
+		min-height: 420px;
+	}
+}
+
+.meta-line {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 8px;
+}
+
+.badge {
+	padding: 3px 7px;
+	border-radius: 99px;
+	background: #ffd7bf;
+	color: #5a280c;
+	font-family: 'Teko', sans-serif;
+	font-size: 12px;
+	letter-spacing: 0.8px;
+	line-height: 1;
+}
+
+.experience {
+	font-family: 'Teko', sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.8px;
+}
+
+.book {
+	margin-top: 12px;
+	align-self: flex-start;
+	background: #ffcea9;
+	color: #4a220a;
+	border: 0;
+	border-radius: 11px;
+	height: 38px;
+	padding: 0 14px;
+	font-family: 'Teko', sans-serif;
+	font-size: 20px;
+	letter-spacing: 0.4px;
+}
+
+.compact {
+	h2 {
+		font-size: 42px;
+	}
+
+	.blurb {
+		max-width: 85%;
+	}
+}
+
+.social {
+	margin-top: 8px;
+	display: flex;
+	gap: 12px;
+	color: #a7a7a7;
+}
+
+.share {
+	width: 14px;
+	height: 14px;
+	border: 2px solid #8f8f8f;
+	border-right: 0;
+	border-bottom: 0;
+	transform: rotate(45deg);
+	position: relative;
+}
+
+.share::after {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background: #8f8f8f;
+	right: -8px;
+	bottom: 3px;
+	transform: rotate(-45deg);
+}
+
+.heart {
+	font-size: 16px;
+	line-height: 1;
+}
+
+.join-card {
+	margin-top: 14px;
+	min-height: 220px;
+	border-radius: 7px;
+	background: linear-gradient(145deg, #1b1b1c 0%, #212123 100%);
+	border: 1px solid rgba(255, 255, 255, 0.03);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 16px;
+	text-align: center;
+
+	h3 {
+		margin: 18px 0 4px;
+		font-family: 'Archivo Black', sans-serif;
+		font-size: 38px;
+		line-height: 0.88;
+	}
+
+	p {
+		margin: 0;
+		color: #9f9f9f;
+		max-width: 82%;
+		line-height: 1.35;
+		font-size: 14px;
+	}
+}
+
+.plus {
+	width: 52px;
+	height: 52px;
+	border-radius: 10px;
+	border: 0;
+	background: #101218;
+	color: #ffb98c;
+	font-size: 38px;
+	line-height: 1;
+}
+
+.apply {
+	margin-top: 16px;
+	border: 0;
+	background: transparent;
+	color: #f4f4f4;
+	font-family: 'Teko', sans-serif;
+	font-size: 18px;
+	letter-spacing: 0.8px;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+}
+
+@media (max-width: 400px) {
+	.intro h1 {
+		font-size: 60px;
+	}
+
+	.overlay h2 {
+		font-size: 38px;
+	}
+
+	.join-card h3 {
+		font-size: 35px;
+	}
+}

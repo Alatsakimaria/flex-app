@@ -1,0 +1,25 @@
+<div class="weekly-page">
+  <header class="topbar">
+    <h1>WEEKLY PROGRAM</h1>
+    <p>Full training split by day</p>
+  </header>
+
+  <section class="days-list">
+    @for (item of weekProgram(); track item.day) {
+      <article class="day-card">
+        <div class="card-head">
+          <h2>{{ item.day }}</h2>
+          <span>{{ item.duration }}</span>
+        </div>
+        <h3>{{ item.title }}</h3>
+        <p class="focus">{{ item.focus }}</p>
+
+        <ul>
+          @for (exercise of item.exercises; track exercise) {
+            <li>{{ exercise }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </section>
+</div>

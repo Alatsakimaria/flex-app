@@ -1,0 +1,83 @@
+<div class="plan-page">
+	<header class="topbar">
+		<button class="menu" type="button" aria-label="Open menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<p class="brand">FLEX</p>
+		<div class="avatar" aria-hidden="true"></div>
+	</header>
+
+	<section class="headline">
+		<p class="kicker">WEEK 04 • HYPERTROPHY</p>
+		<h1>MY <span>PLAN</span></h1>
+		<p class="progress-label">PROGRESS</p>
+		<div class="progress-row">
+			<strong>{{ progress() }}%</strong>
+			<div class="progress-track" role="progressbar" [attr.aria-valuenow]="progress()" aria-valuemin="0" aria-valuemax="100">
+				<span [style.width.%]="progress()"></span>
+			</div>
+		</div>
+	</section>
+
+	<section class="exercise-list">
+		@for (item of exercises(); track item.title) {
+			<article class="exercise-card">
+				<img [src]="item.image" [alt]="item.title" />
+				<div class="exercise-head">
+					<div>
+						<h2>{{ item.title }}</h2>
+						<p>{{ item.focus }}</p>
+					</div>
+					@if (item.status === 'done') {
+						<button class="done" type="button" aria-label="Completed">
+							<span>✓</span>
+						</button>
+					} @else {
+						<button class="pending" type="button" aria-label="Not completed"></button>
+					}
+				</div>
+
+				<div class="stats-grid">
+					<div>
+						<span>SETS</span>
+						<strong>{{ item.sets }}</strong>
+					</div>
+					<div>
+						<span>REPS</span>
+						<strong>{{ item.reps }}</strong>
+					</div>
+					<div>
+						<span>RPE</span>
+						<strong class="accent">{{ item.rpe }}</strong>
+					</div>
+				</div>
+			</article>
+		}
+	</section>
+
+	<section class="intensity">
+		<p>TARGET INTENSITY</p>
+		<h3>165</h3>
+		<span>AVERAGE BPM</span>
+	</section>
+
+	<section class="schedule">
+		<h3>WEEKLY SCHEDULE</h3>
+		<div class="schedule-list">
+			@for (day of weekSchedule(); track day.day) {
+				<article>
+					<span>{{ day.day }}</span>
+					<p [class.done]="day.state === 'done'" [class.active]="day.state === 'active'">{{ day.label }}</p>
+				</article>
+			}
+		</div>
+	</section>
+
+	<section class="motivation">
+		<h3>PUSH THE<br />LIMIT TODAY.</h3>
+		<p>CONSISTENCY BEATS INTENSITY.</p>
+		<span aria-hidden="true" class="cross">✕</span>
+	</section>
+</div>

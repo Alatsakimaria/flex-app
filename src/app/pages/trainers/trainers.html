@@ -1,0 +1,60 @@
+<div class="trainers-page">
+	<header class="topbar">
+		<button class="menu" type="button" aria-label="Open menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<p class="brand">FLEX</p>
+		<div class="avatar" aria-hidden="true"></div>
+	</header>
+
+	<section class="intro">
+		<p class="kicker">ELITE COACHING</p>
+		<h1>THE ARCHITECTS OF <span>PERFORMANCE</span></h1>
+		<p class="summary">
+			Meet the world-class trainers dedicated to pushing your limits. From olympic
+			lifting to high-intensity metabolic conditioning.
+		</p>
+	</section>
+
+	<section class="trainer-card featured">
+		<img [src]="featuredTrainer().image" [alt]="featuredTrainer().name" />
+		<div class="overlay">
+			<div class="meta-line">
+				<span class="badge">{{ featuredTrainer().badge }}</span>
+				<span class="experience">{{ featuredTrainer().experience }}</span>
+			</div>
+			<h2>{{ featuredTrainer().name }}</h2>
+			<p class="role">{{ featuredTrainer().role }}</p>
+			<p class="blurb">{{ featuredTrainer().blurb }}</p>
+			<button type="button" class="book">BOOK SESSION <span aria-hidden="true">→</span></button>
+		</div>
+	</section>
+
+	<section class="trainer-list">
+		@for (coach of trainers(); track coach.name) {
+			<article class="trainer-card">
+				<img [src]="coach.image" [alt]="coach.name" />
+				<div class="overlay compact">
+					<h2>{{ coach.name }}</h2>
+					<p class="role">{{ coach.role }}</p>
+					<p class="blurb">{{ coach.blurb }}</p>
+					@if (coach.name === 'SARAH CHEN') {
+						<div class="social" aria-hidden="true">
+							<span class="share"></span>
+							<span class="heart">♥</span>
+						</div>
+					}
+				</div>
+			</article>
+		}
+	</section>
+
+	<section class="join-card">
+		<button class="plus" type="button" aria-label="Join roster">+</button>
+		<h3>JOIN THE ROSTER</h3>
+		<p>Are you a certified elite coach? We’re always looking for new talent.</p>
+		<button class="apply" type="button">APPLY NOW</button>
+	</section>
+</div>

@@ -1,0 +1,114 @@
+<div class="page">
+  <header class="topbar">
+    <div class="brand-wrap">
+      <div class="avatar">M</div>
+      <div class="brand">Flex health & Fitness</div>
+    </div>
+    <button class="bell" type="button" aria-label="Notifications">
+      <span></span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <img
+      [src]="gallerySlides[activeSlideIndex()].src"
+      [alt]="gallerySlides[activeSlideIndex()].alt"
+    />
+    <div class="overlay">
+      <h1>WELCOME BACK,<br />ALEX</h1>
+      <div class="hero-dots" aria-hidden="true">
+        @for (slide of gallerySlides; track slide.src; let i = $index) {
+          <span [class.active]="activeSlideIndex() === i"></span>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="quick-actions">
+    @for (action of quickActions(); track action.label) {
+      <button type="button" class="action-btn" (click)="openQuickAction(action)">
+        <span class="ico" [class]="'ico ' + action.icon" aria-hidden="true"></span>
+        <span>{{ action.label }}</span>
+      </button>
+    }
+  </section>
+
+  <section class="announcement card">
+    <h3>HOLIDAY HOURS UPDATE</h3>
+    <p>
+      Flex Health will be open 8AM - 2PM this Friday for the public holiday. All evening
+      classes are rescheduled.
+    </p>
+    <div class="pager" aria-hidden="true">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="burst" aria-hidden="true"></div>
+  </section>
+
+  <section class="section-header">
+    <h2>DAILY DRILL</h2>
+    <span>TARGET: Uper Body</span>
+  </section>
+
+  <section class="drill card light-card">
+    <div>
+      <h3>UPPER BODY A</h3>
+      <p>45 MINS - 8 EXERCISES</p>
+    </div>
+    <button class="play" type="button" aria-label="Play workout">
+      <span class="play-icon"></span>
+    </button>
+  </section>
+
+  <section class="section-header">
+    <h2>TODAY'S CLASSES</h2>
+    <span>SEE ALL</span>
+  </section>
+
+  <section class="class-list">
+    @for (item of classes(); track item.time) {
+      <article class="class-card card" [class.hot]="item.status === 'wait'">
+        <div class="time">
+          <strong>{{ item.time }}</strong>
+          <span>{{ item.period }}</span>
+        </div>
+        <div class="details">
+          <h4>{{ item.title }}</h4>
+          <p>{{ item.coach }}</p>
+        </div>
+        @if (item.status === 'book') {
+          <button class="book" type="button">BOOK</button>
+        } @else {
+          <div class="wait-wrap">
+            <span class="full">FULL</span>
+            <button class="wait" type="button">WAIT</button>
+          </div>
+        }
+      </article>
+    }
+  </section>
+
+  <section class="streak card">
+    <p>ACTIVE STREAK</p>
+    <div class="streak-row">
+      <h3>14 DAYS</h3>
+      <div class="days" aria-label="Current week progress">
+        <span>M</span>
+        <span>T</span>
+        <span class="active">W</span>
+        <span>T</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-info card">
+    <h3>CONTACT &amp; HOURS</h3>
+    <p><strong>Location:</strong> Flex Gym, Main Street 24</p>
+    <p><strong>Phone:</strong> +30 2810 123456</p>
+    <p><strong>Mon - Fri:</strong> 08:00 - 23:00</p>
+    <p><strong>Saturday:</strong> 12:00 - 20:00</p>
+    <p><strong>Sunday:</strong> Closed</p>
+  </section>
+</div>

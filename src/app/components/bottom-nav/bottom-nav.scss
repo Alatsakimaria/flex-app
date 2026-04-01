@@ -1,0 +1,31 @@
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 420px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  padding: 14px 16px 18px;
+  background: rgba(5, 5, 5, 0.96);
+  border-top: 1px solid rgba(255,255,255,0.05);
+
+  a {
+    text-decoration: none;
+    color: #b5b5b5;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 12px 8px;
+    border-radius: 14px;
+    background: #0d0d0d;
+  }
+
+  a.active {
+    color: #ff8a57;
+    background: #18100c;
+    font-weight: 700;
+  }
+}

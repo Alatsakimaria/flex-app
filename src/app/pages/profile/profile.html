@@ -1,0 +1,53 @@
+<div class="profile-page">
+	<header class="topbar">
+		<p class="brand">FLEX</p>
+		<button class="menu" type="button" aria-label="Open menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<div class="avatar-mini" aria-hidden="true"></div>
+	</header>
+
+	<section class="profile-hero">
+		<div class="avatar-frame">
+			<div class="avatar-main" aria-hidden="true"></div>
+			<span class="pro-pill">PRO</span>
+		</div>
+
+		<h1>{{ memberName() }}</h1>
+		<p class="tier"><span class="medal">◉</span> {{ memberTier() }}</p>
+	</section>
+
+	<section class="stats-grid" aria-label="Member stats">
+		@for (stat of stats(); track stat.label) {
+			<article class="stat-card" [class.lime]="stat.accent === 'lime'" [class.orange]="stat.accent === 'orange'">
+				<p>{{ stat.label }}</p>
+				<h2>{{ stat.value }}</h2>
+			</article>
+		}
+	</section>
+
+	<section class="account">
+		<p class="account-title">ACCOUNT OVERVIEW</p>
+		<div class="account-list">
+			@for (item of accountItems(); track item.title) {
+				<button class="account-item" type="button" [attr.aria-label]="item.title">
+					<span class="item-icon" [class]="'item-icon ' + item.icon" aria-hidden="true"></span>
+					<span class="item-label">{{ item.title }}</span>
+					<span class="chevron" aria-hidden="true">›</span>
+				</button>
+			}
+		</div>
+	</section>
+
+	<button class="signout" type="button" aria-label="Sign out">
+		<span class="logout-ico" aria-hidden="true">↪</span>
+		<span>SIGN OUT</span>
+	</button>
+
+	<section class="watermark" aria-hidden="true">
+		<h3>PRECISION</h3>
+		<p>EST. 2024</p>
+	</section>
+</div>

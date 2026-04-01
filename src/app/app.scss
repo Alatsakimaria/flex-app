@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #050505;
+  color: #ffffff;
+  font-family: 'Teko', sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+.app-shell {
+  min-height: 100vh;
+  max-width: 420px;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #050505 0%, #050505 84%, #1f110b 100%);
+  color: #fff;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.35);
+}
