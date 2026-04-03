@@ -12,10 +12,12 @@ FlexApp is being built for a **local gym** to support members and trainers with 
 
 ## Screenshots
 
-![Home Page 1](public/photos/home-page1.jpg)
-![Home Page 2](public/photos/home-page2.jpg)
-![Plan Page](public/photos/plan-page.jpg)
-![Trainers Page](public/photos/trainers-page.jpg)
+<p align="center">
+	<img src="public/photos/home-page1.jpg" alt="Home Page 1" width="260" />
+	<img src="public/photos/home-page2.jpg" alt="Home Page 2" width="260" />
+	<img src="public/photos/plan-page.jpg" alt="Plan Page" width="260" />
+	<img src="public/photos/trainers-page.jpg" alt="Trainers Page" width="260" />
+</p>
 
 
 ## Development server
