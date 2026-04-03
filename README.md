@@ -12,14 +12,11 @@ FlexApp is being built for a **local gym** to support members and trainers with 
 
 ## Screenshots
 
-Example structure:
-
-```md
 ![Home Page 1](public/photos/home-page1.jpg)
 ![Home Page 2](public/photos/home-page2.jpg)
 ![Plan Page](public/photos/plan-page.jpg)
 ![Trainers Page](public/photos/trainers-page.jpg)
-```
+
 
 ## Development server
 
