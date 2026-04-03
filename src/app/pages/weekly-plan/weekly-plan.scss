@@ -3,15 +3,15 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.topbar {
+.headline {
   margin-bottom: 14px;
 
   h1 {
     margin: 0;
-    font-size: 24px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 700;
     color: #ff8a57;
-    letter-spacing: 0.2px;
+    letter-spacing: 0;
   }
 
   p {
@@ -29,12 +29,12 @@
 .day-card {
   background: linear-gradient(155deg, #171717 0%, #121212 100%);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
-  padding: 14px;
+  border-radius: 10px;
+  padding: 12px;
 
   h3 {
     margin: 8px 0 0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
   }
 }
@@ -47,9 +47,9 @@
   h2 {
     margin: 0;
     color: #ff8a57;
-    font-size: 14px;
-    letter-spacing: 0.6px;
-    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.2px;
+    font-weight: 700;
   }
 
   span {
@@ -74,7 +74,7 @@ ul {
 
 li {
   color: #e8e8e8;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.35;
   margin-bottom: 4px;
 }

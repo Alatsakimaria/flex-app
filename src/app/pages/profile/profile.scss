@@ -1,70 +1,26 @@
 .profile-page {
-	padding: 18px 16px 120px;
-}
-
-.topbar {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-}
-
-.brand {
-	margin: 0;
-	color: #ff8a57;
-	font-family: 'Teko', sans-serif;
-	font-size: 52px;
-	line-height: 0.9;
-	font-weight: 700;
-	letter-spacing: 0.8px;
-}
-
-.menu {
-	margin-left: auto;
-	width: 30px;
-	height: 30px;
-	border: 0;
-	background: transparent;
-	display: grid;
-	align-content: center;
-	gap: 4px;
-
-	span {
-		display: block;
-		height: 2px;
-		background: #ff8a57;
-		border-radius: 99px;
-	}
-}
-
-.avatar-mini {
-	width: 46px;
-	height: 46px;
-	border-radius: 14px;
-	background: #13181f;
-	border: 1px solid rgba(255, 255, 255, 0.07);
-	background-image: url('https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=220&q=80');
-	background-size: cover;
-	background-position: center;
+	padding: 16px 16px 118px;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .profile-hero {
-	margin-top: 24px;
+	margin-top: 12px;
 	text-align: center;
 
 	h1 {
-		margin: 22px 0 6px;
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 72px;
-		line-height: 0.88;
-		letter-spacing: 0.4px;
+		margin: 18px 0 6px;
+		font-size: 30px;
+		line-height: 0.96;
+		letter-spacing: 0;
+		font-weight: 700;
 	}
 }
 
 .avatar-frame {
-	width: 184px;
-	height: 184px;
+	width: 150px;
+	height: 150px;
 	margin: 0 auto;
-	border-radius: 24px;
+	border-radius: 18px;
 	padding: 6px;
 	background: linear-gradient(145deg, #e4efbb 0%, #f67d4f 100%);
 	position: relative;
@@ -74,7 +30,7 @@
 .avatar-main {
 	width: 100%;
 	height: 100%;
-	border-radius: 18px;
+	border-radius: 14px;
 	background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=500&q=80');
 	background-size: cover;
 	background-position: center;
@@ -86,26 +42,25 @@
 	left: 50%;
 	bottom: -15px;
 	transform: translateX(-50%);
-	min-width: 72px;
-	height: 38px;
+	min-width: 62px;
+	height: 30px;
 	border-radius: 999px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	background: #ffcfaf;
 	color: #5c2a0e;
-	font-family: 'Archivo Black', sans-serif;
-	font-size: 24px;
-	letter-spacing: 1px;
+	font-size: 12px;
+	letter-spacing: 0.2px;
+	font-weight: 700;
 	box-shadow: 0 10px 24px rgba(255, 122, 69, 0.32);
 }
 
 .tier {
 	margin: 0;
 	color: #8e8e8e;
-	font-family: 'Teko', sans-serif;
-	letter-spacing: 1px;
-	font-size: 34px;
+	letter-spacing: 0.4px;
+	font-size: 12px;
 	line-height: 1;
 	display: inline-flex;
 	align-items: center;
@@ -114,37 +69,37 @@
 
 .medal {
 	color: #ff7d4f;
-	font-size: 16px;
+	font-size: 12px;
 }
 
 .stats-grid {
-	margin-top: 24px;
+	margin-top: 18px;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 12px;
 }
 
 .stat-card {
-	border-radius: 12px;
+	border-radius: 10px;
 	background: #111214;
-	min-height: 132px;
-	padding: 16px;
+	min-height: 88px;
+	padding: 12px;
 	border-left: 3px solid transparent;
 
 	p {
 		margin: 0;
 		color: #8f8f8f;
-		font-family: 'Teko', sans-serif;
-		font-size: 26px;
+		font-size: 11px;
 		line-height: 1;
-		letter-spacing: 1px;
+		letter-spacing: 0.3px;
+		font-weight: 600;
 	}
 
 	h2 {
 		margin: 14px 0 0;
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 70px;
+		font-size: 24px;
 		line-height: 0.84;
+		font-weight: 700;
 	}
 }
 
@@ -157,29 +112,29 @@
 }
 
 .account {
-	margin-top: 26px;
+	margin-top: 18px;
 }
 
 .account-title {
 	margin: 0;
 	color: #8f8f8f;
-	font-family: 'Teko', sans-serif;
-	font-size: 30px;
-	letter-spacing: 2px;
+	font-size: 11px;
+	letter-spacing: 0.6px;
 	line-height: 1;
+	font-weight: 600;
 }
 
 .account-list {
-	margin-top: 12px;
+	margin-top: 10px;
 	display: grid;
-	gap: 12px;
+	gap: 10px;
 }
 
 .account-item {
 	width: 100%;
-	min-height: 92px;
+	min-height: 60px;
 	border: 0;
-	border-radius: 12px;
+	border-radius: 10px;
 	background: #131416;
 	color: #f4f4f4;
 	display: flex;
@@ -189,15 +144,14 @@
 }
 
 .item-icon {
-	width: 56px;
-	height: 56px;
+	width: 36px;
+	height: 36px;
 	border-radius: 8px;
 	background: #26272a;
 	display: grid;
 	place-items: center;
 	color: #ffb991;
-	font-family: 'Archivo Black', sans-serif;
-	font-size: 30px;
+	font-size: 16px;
 }
 
 .item-icon.settings::before {
@@ -214,23 +168,23 @@
 
 .item-label {
 	margin-left: 14px;
-	font-size: 44px;
+	font-size: 16px;
 	line-height: 0.9;
-	font-family: 'Archivo Black', sans-serif;
+	font-weight: 700;
 }
 
 .chevron {
 	margin-left: auto;
 	color: #929292;
-	font-size: 44px;
+	font-size: 18px;
 	line-height: 1;
 }
 
 .signout {
-	margin-top: 24px;
+	margin-top: 18px;
 	width: 100%;
-	height: 84px;
-	border-radius: 14px;
+	height: 48px;
+	border-radius: 10px;
 	border: 1px solid rgba(255, 102, 68, 0.35);
 	background: transparent;
 	color: #ff6d46;
@@ -238,9 +192,9 @@
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
-	font-family: 'Teko', sans-serif;
-	font-size: 40px;
-	letter-spacing: 0.8px;
+	font-size: 13px;
+	letter-spacing: 0.3px;
+	font-weight: 600;
 }
 
 .logout-ico {
@@ -248,14 +202,13 @@
 }
 
 .watermark {
-	margin-top: 54px;
+	margin-top: 34px;
 	text-align: center;
 	opacity: 0.2;
 
 	h3 {
 		margin: 0;
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 86px;
+		font-size: 36px;
 		line-height: 0.9;
 		color: #1a1d22;
 		font-style: italic;
@@ -264,35 +217,34 @@
 	p {
 		margin: 8px 0 0;
 		color: #3b3f46;
-		font-family: 'Teko', sans-serif;
-		font-size: 24px;
-		letter-spacing: 8px;
+		font-size: 11px;
+		letter-spacing: 3px;
 		line-height: 1;
 	}
 }
 
 @media (max-width: 430px) {
 	.profile-hero h1 {
-		font-size: 60px;
+		font-size: 28px;
 	}
 
 	.tier {
-		font-size: 30px;
+		font-size: 11px;
 	}
 
 	.stat-card p {
-		font-size: 22px;
+		font-size: 10px;
 	}
 
 	.stat-card h2 {
-		font-size: 58px;
+		font-size: 22px;
 	}
 
 	.item-label {
-		font-size: 38px;
+		font-size: 15px;
 	}
 
 	.signout {
-		font-size: 34px;
+		font-size: 12px;
 	}
 }

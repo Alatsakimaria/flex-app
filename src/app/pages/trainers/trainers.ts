@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { TopNavComponent } from '../../components/top-nav/top-nav';
 
 interface TrainerProfile {
   readonly name: string;
@@ -12,7 +13,7 @@ interface TrainerProfile {
 
 @Component({
   selector: 'app-trainers',
-  imports: [],
+  imports: [TopNavComponent],
   templateUrl: './trainers.html',
   styleUrl: './trainers.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

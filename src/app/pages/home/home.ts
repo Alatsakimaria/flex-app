@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, signal } from '@angular/core';
 import { Router } from '@angular/router';
+import { TopNavComponent } from '../../components/top-nav/top-nav';
 
 interface GallerySlide {
   readonly src: string;
@@ -14,13 +15,14 @@ interface QuickAction {
 
 @Component({
   selector: 'app-home',
+  imports: [TopNavComponent],
   templateUrl: './home.html',
   styleUrl: './home.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit, OnDestroy {
   readonly quickActions = signal<readonly QuickAction[]>([
-    { label: 'VIEW MY PLAN', icon: 'card', route: '/weekly-plan' },
+    { label: 'VIEW MY PLAN', icon: 'plan', route: '/weekly-plan' },
     { label: 'REQUEST TRAINER', icon: 'headset', route: '/trainers' }
   ]);
 

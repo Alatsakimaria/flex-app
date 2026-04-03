@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { TopNavComponent } from '../../components/top-nav/top-nav';
 
 interface DayProgram {
   readonly day: string;
@@ -10,6 +11,8 @@ interface DayProgram {
 
 @Component({
   selector: 'app-weekly-plan',
+  standalone: true,
+  imports: [TopNavComponent],
   templateUrl: './weekly-plan.html',
   styleUrl: './weekly-plan.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,48 +1,6 @@
 .plan-page {
 	padding: 16px 16px 118px;
-}
-
-.topbar {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-}
-
-.menu {
-	width: 22px;
-	height: 22px;
-	border: 0;
-	background: transparent;
-	display: grid;
-	gap: 3px;
-	padding: 2px 0;
-
-	span {
-		display: block;
-		height: 2px;
-		border-radius: 99px;
-		background: #8d8d8d;
-	}
-}
-
-.brand {
-	margin: 0;
-	color: #ff8a57;
-	font-family: 'Teko', sans-serif;
-	font-size: 40px;
-	line-height: 1;
-	letter-spacing: 1px;
-	font-weight: 700;
-}
-
-.avatar {
-	margin-left: auto;
-	width: 32px;
-	height: 32px;
-	border-radius: 10px;
-	background-image: url('https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80');
-	background-size: cover;
-	background-position: center;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .headline {
@@ -51,17 +9,17 @@
 	.kicker {
 		margin: 0;
 		color: #ff804f;
-		font-family: 'Teko', sans-serif;
-		font-size: 18px;
-		letter-spacing: 1.5px;
+		font-size: 12px;
+		letter-spacing: 0.5px;
+		font-weight: 600;
 	}
 
 	h1 {
 		margin: 4px 0 10px;
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 70px;
-		line-height: 0.88;
-		letter-spacing: 0.4px;
+		font-size: 34px;
+		line-height: 0.95;
+		letter-spacing: 0;
+		font-weight: 700;
 	}
 
 	h1 span {
@@ -71,9 +29,8 @@
 	.progress-label {
 		margin: 0;
 		color: #9f9f9f;
-		font-family: 'Teko', sans-serif;
-		font-size: 18px;
-		letter-spacing: 1.2px;
+		font-size: 11px;
+		letter-spacing: 0.4px;
 	}
 }
 
@@ -84,9 +41,9 @@
 	gap: 14px;
 
 	strong {
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 40px;
+		font-size: 22px;
 		line-height: 1;
+		font-weight: 700;
 	}
 }
 
@@ -114,7 +71,7 @@
 	background: linear-gradient(145deg, #1a1a1b 0%, #191919 100%);
 	border: 1px solid rgba(255, 255, 255, 0.03);
 	border-radius: 8px;
-	padding: 14px;
+	padding: 12px;
 
 	img {
 		width: 100%;
@@ -135,37 +92,42 @@
 
 	h2 {
 		margin: 0;
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 36px;
+		font-size: 18px;
 		line-height: 0.92;
+		font-weight: 700;
 	}
 
 	p {
 		margin: 4px 0 0;
 		color: #c7c7c7;
-		font-size: 15px;
+		font-size: 12px;
 	}
 }
 
-.done,
-.pending {
-	width: 30px;
-	height: 30px;
+.status-toggle {
+	width: 24px;
+	height: 24px;
 	border-radius: 50%;
 	border: 1px solid #404040;
 	background: transparent;
 	color: #111;
 	flex: 0 0 auto;
+	display: grid;
+	place-items: center;
 }
 
-.done {
+.status-toggle.done {
 	background: #ffceb0;
 	border-color: #ffceb0;
 
 	span {
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 14px;
+		font-size: 11px;
+		font-weight: 700;
 	}
+}
+
+.status-toggle.pending {
+	background: transparent;
 }
 
 .stats-grid {
@@ -178,18 +140,17 @@
 
 	span {
 		color: #959595;
-		font-family: 'Teko', sans-serif;
-		font-size: 15px;
-		letter-spacing: 0.9px;
+		font-size: 11px;
+		letter-spacing: 0.2px;
 		line-height: 1;
 	}
 
 	strong {
 		margin-top: 2px;
 		display: block;
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 36px;
+		font-size: 18px;
 		line-height: 0.9;
+		font-weight: 700;
 	}
 }
 
@@ -207,24 +168,22 @@
 	p {
 		margin: 0;
 		color: #ddddc8;
-		font-family: 'Teko', sans-serif;
-		letter-spacing: 2px;
-		font-size: 17px;
+		letter-spacing: 0.8px;
+		font-size: 11px;
 	}
 
 	h3 {
 		margin: 8px 0 2px;
 		color: #ff7548;
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 74px;
+		font-size: 34px;
 		line-height: 0.82;
+		font-weight: 700;
 	}
 
 	span {
 		color: #d4d4d4;
-		font-family: 'Teko', sans-serif;
-		font-size: 18px;
-		letter-spacing: 0.9px;
+		font-size: 11px;
+		letter-spacing: 0.4px;
 	}
 }
 
@@ -237,9 +196,9 @@
 
 	h3 {
 		margin: 0 0 8px;
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 23px;
-		letter-spacing: 1px;
+		font-size: 14px;
+		letter-spacing: 0.3px;
+		font-weight: 700;
 	}
 }
 
@@ -255,18 +214,17 @@
 	}
 
 	span {
-		font-family: 'Teko', sans-serif;
-		font-size: 27px;
+		font-size: 14px;
 		line-height: 1;
+		font-weight: 700;
 	}
 
 	p {
 		margin: 0;
 		color: #7e7e7e;
-		font-family: 'Teko', sans-serif;
-		font-size: 19px;
+		font-size: 11px;
 		line-height: 1;
-		letter-spacing: 0.5px;
+		letter-spacing: 0.2px;
 		display: flex;
 		align-items: center;
 		gap: 7px;
@@ -306,16 +264,15 @@
 
 	h3 {
 		margin: 0;
-		font-family: 'Archivo Black', sans-serif;
-		font-size: 46px;
+		font-size: 28px;
 		line-height: 0.86;
+		font-weight: 700;
 	}
 
 	p {
 		margin: 8px 0 0;
-		font-family: 'Teko', sans-serif;
-		font-size: 17px;
-		letter-spacing: 1.1px;
+		font-size: 11px;
+		letter-spacing: 0.3px;
 	}
 }
 
@@ -325,24 +282,24 @@
 	bottom: -8px;
 	color: #f2b997;
 	font-size: 80px;
+	font-size: 58px;
 	line-height: 1;
-	font-family: 'Archivo Black', sans-serif;
 }
 
 @media (max-width: 400px) {
 	.headline h1 {
-		font-size: 62px;
+		font-size: 30px;
 	}
 
 	.exercise-head h2 {
-		font-size: 32px;
+		font-size: 16px;
 	}
 
 	.stats-grid strong {
-		font-size: 32px;
+		font-size: 16px;
 	}
 
 	.motivation h3 {
-		font-size: 41px;
+		font-size: 24px;
 	}
 }

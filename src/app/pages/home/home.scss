@@ -3,74 +3,12 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.topbar,
 .section-header,
 .class-card,
 .drill {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.topbar {
-  margin-bottom: 14px;
-}
-
-.brand-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #11233a 0%, #0f294a 100%);
-  color: #f2f7ff;
-  display: grid;
-  place-items: center;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-}
-
-.brand {
-  color: #ff8a57;
-  font-size: 22px;
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-.bell {
-  width: 36px;
-  height: 36px;
-  border: 0;
-  border-radius: 50%;
-  background: #111;
-  display: grid;
-  place-items: center;
-
-  span {
-    width: 14px;
-    height: 14px;
-    background: #ff8a57;
-    border-radius: 60% 60% 45% 45%;
-    display: block;
-    position: relative;
-  }
-
-  span::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 2px;
-    border-radius: 99px;
-    background: #ff8a57;
-    left: 4px;
-    bottom: -4px;
-  }
 }
 
 .hero {
@@ -98,11 +36,11 @@
   }
 
   h1 {
-    font-size: 36px;
-    line-height: 0.96;
+    font-size: 29px;
+    line-height: 1.02;
     margin: 0 0 8px;
     letter-spacing: 0;
-    font-weight: 800;
+    font-weight: 700;
   }
 
   p {
@@ -141,14 +79,14 @@
 
 .action-btn {
   min-width: 132px;
-  background: #161616;
+  background: #141414;
   color: #fff;
-  border: 0;
-  border-radius: 13px;
-  padding: 12px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 10px 10px;
   font-size: 12px;
   letter-spacing: 0.2px;
-  font-weight: 600;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -162,6 +100,28 @@
   position: relative;
   border: 2px solid #ffd5bc;
   border-radius: 3px;
+}
+
+.ico.plan {
+  border-radius: 4px;
+}
+
+.ico.plan::before,
+.ico.plan::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  height: 1.5px;
+  background: #ffd5bc;
+}
+
+.ico.plan::before {
+  top: 4px;
+}
+
+.ico.plan::after {
+  top: 8px;
 }
 
 .ico.headset {
@@ -206,8 +166,8 @@
 
 .card {
   background: linear-gradient(155deg, #181818 0%, #121212 100%);
-  border-radius: 18px;
-  padding: 18px;
+  border-radius: 12px;
+  padding: 14px;
   margin-bottom: 14px;
   border: 1px solid rgba(255, 255, 255, 0.03);
 }
@@ -218,9 +178,9 @@
 
   h3 {
     margin: 0 0 6px;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.2px;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   p {
@@ -279,9 +239,9 @@
 
   h3 {
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1;
-    font-weight: 800;
+    font-weight: 700;
   }
 
   p {
@@ -296,9 +256,9 @@
   background: #ff7a45;
   color: white;
   border: 0;
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
   display: grid;
   place-items: center;
 }
@@ -306,9 +266,9 @@
 .play-icon {
   width: 0;
   height: 0;
-  border-top: 8px solid transparent;
-  border-bottom: 8px solid transparent;
-  border-left: 12px solid #ffffff;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 9px solid #ffffff;
   margin-left: 2px;
 }
 
@@ -317,10 +277,10 @@
 
   h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.1;
     letter-spacing: 0;
-    font-weight: 800;
+    font-weight: 700;
   }
 
   span {
@@ -346,10 +306,10 @@
 
     strong {
       display: block;
-      font-size: 28px;
+      font-size: 22px;
       line-height: 0.9;
       color: #ffd4b8;
-      font-weight: 800;
+      font-weight: 700;
     }
 
     span {
@@ -368,9 +328,9 @@
 
   h4 {
     margin: 0 0 6px;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 0.95;
-    font-weight: 800;
+    font-weight: 700;
   }
 
   p {
@@ -386,14 +346,14 @@
 .wait {
   background: #232323;
   color: white;
-  border: 0;
-  border-radius: 8px;
-  min-width: 56px;
-  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+  min-width: 54px;
+  height: 34px;
   padding: 0 12px;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 0.4px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .wait-wrap {
@@ -405,12 +365,12 @@
 .full {
   background: #fc5f32;
   color: #fff6ea;
-  padding: 2px 6px;
+  padding: 2px 5px;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 9px;
   line-height: 1;
-  letter-spacing: 0.4px;
-  font-weight: 700;
+  letter-spacing: 0.2px;
+  font-weight: 600;
 }
 
 .hot {
@@ -448,8 +408,8 @@
   h3 {
     margin: 0 0 10px;
     color: #ff9b6f;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 0.3px;
   }
 

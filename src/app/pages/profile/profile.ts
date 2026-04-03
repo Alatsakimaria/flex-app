@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { TopNavComponent } from '../../components/top-nav/top-nav';
 
 interface ProfileStat {
   readonly label: string;
@@ -13,7 +14,7 @@ interface AccountItem {
 
 @Component({
   selector: 'app-profile',
-  imports: [],
+  imports: [TopNavComponent],
   templateUrl: './profile.html',
   styleUrl: './profile.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

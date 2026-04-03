@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { TopNavComponent } from '../../components/top-nav/top-nav';
 
 type ExerciseStatus = 'done' | 'pending';
 
@@ -9,7 +10,7 @@ interface ExerciseItem {
   readonly reps: string;
   readonly rpe: string;
   readonly image: string;
-  readonly status: ExerciseStatus;
+  status: ExerciseStatus;
 }
 
 interface DayPlan {
@@ -20,7 +21,7 @@ interface DayPlan {
 
 @Component({
   selector: 'app-plan',
-  imports: [],
+  imports: [TopNavComponent],
   templateUrl: './plan.html',
   styleUrl: './plan.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -68,4 +69,19 @@ export class Plan {
     { day: 'THU', label: 'UPPER BODY', state: 'upcoming' },
     { day: 'FRI', label: 'LOWER BODY', state: 'upcoming' }
   ]);
+
+  toggleExercise(index: number): void {
+    this.exercises.update((items) =>
+      items.map((item, currentIndex) => {
+        if (currentIndex !== index) {
+          return item;
+        }
+
+        return {
+          ...item,
+          status: item.status === 'done' ? 'pending' : 'done'
+        };
+      })
+    );
+  }
 }

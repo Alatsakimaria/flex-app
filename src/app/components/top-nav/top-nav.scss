@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  margin-bottom: 14px;
+  padding: 4px 0 10px;
+  background: linear-gradient(to bottom, rgba(5, 5, 5, 0.96), rgba(5, 5, 5, 0));
+  backdrop-filter: blur(6px);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+}
+
+.menu {
+  width: 24px;
+  height: 24px;
+  border: 0;
+  padding: 2px 0;
+  display: grid;
+  gap: 3px;
+  background: transparent;
+
+  span {
+    display: block;
+    height: 2px;
+    border-radius: 999px;
+    background: #7d7d7d;
+  }
+}
+
+.brand {
+  margin: 0;
+  color: #ff8a57;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.avatar {
+  margin-left: auto;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80');
+  background-size: cover;
+  background-position: center;
+}

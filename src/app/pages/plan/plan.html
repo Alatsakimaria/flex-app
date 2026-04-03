@@ -1,13 +1,5 @@
 <div class="plan-page">
-	<header class="topbar">
-		<button class="menu" type="button" aria-label="Open menu">
-			<span></span>
-			<span></span>
-			<span></span>
-		</button>
-		<p class="brand">FLEX</p>
-		<div class="avatar" aria-hidden="true"></div>
-	</header>
+	<app-top-nav></app-top-nav>
 
 	<section class="headline">
 		<p class="kicker">WEEK 04 • HYPERTROPHY</p>
@@ -22,7 +14,7 @@
 	</section>
 
 	<section class="exercise-list">
-		@for (item of exercises(); track item.title) {
+		@for (item of exercises(); track item.title; let i = $index) {
 			<article class="exercise-card">
 				<img [src]="item.image" [alt]="item.title" />
 				<div class="exercise-head">
@@ -30,13 +22,19 @@
 						<h2>{{ item.title }}</h2>
 						<p>{{ item.focus }}</p>
 					</div>
-					@if (item.status === 'done') {
-						<button class="done" type="button" aria-label="Completed">
+					<button
+						type="button"
+						class="status-toggle"
+						[class.done]="item.status === 'done'"
+						[class.pending]="item.status === 'pending'"
+						(click)="toggleExercise(i)"
+						[attr.aria-label]="item.status === 'done' ? 'Mark as not done' : 'Mark as done'"
+						[attr.aria-pressed]="item.status === 'done'"
+					>
+						@if (item.status === 'done') {
 							<span>✓</span>
-						</button>
-					} @else {
-						<button class="pending" type="button" aria-label="Not completed"></button>
-					}
+						}
+					</button>
 				</div>
 
 				<div class="stats-grid">
